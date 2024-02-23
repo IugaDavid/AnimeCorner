@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnimeCorner</title>
+<link rel="stylesheet" href="./Catalog-page-style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class='nav-bar'>
+                <img src="../Resurse/White logo - no background.png" width="150px">
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                    <li><a href="../Home Page/Home-Page.html" target="_blank">Home</a></li>
+                    <li><a href="../Manga/Manga-Page.html" target="_blank">Manga</a></li>
+                    <li><a href="../Catalog/Catalog-Page.html" target="_blank">Catalog</a></li>
+                    <li><a href="../News/News-Page.html" target="_blank">News</a></li>
+                    <li><a href="../Login-Singin/Login-Singin-Page.html" target="_blank">LogIn/Singin</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+        </header>
+
+<main>
+
+    <div class="container">
+
+        <div class="slide">
+
+            
+            <div class="item" style="background-image: url(../Resurse/jujutsu\ kaisen\(catalog\).jpg);">
+                <div class="content">
+                    <div class="name">Jujutsu Kaisen</div>
+                    <div class="des">Yuji Itadori is a boy with tremendous physical strength, though he lives a completely ordinary high school life. One day, to save a classmate who has been attacked by curses, he eats the finger of Ryomen Sukuna, taking the curse into his own soul. From then on, he shares one body with Ryomen Sukuna. Guided by the most powerful of sorcerers, Satoru Gojo, Itadori is admitted to Tokyo Jujutsu High School, an organization that fights the curses... and thus begins the heroic tale of a boy who became a curse to exorcise a curse, a life from which he could never turn back.</div>
+                    <button id="myBtn">See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(../Resurse/demon-slayer\(catalog\).jpg);">
+                <div class="content">
+                    <div class="name">Demon Slayer</div>
+                    <div class="des">It is the Taisho Period in Japan. Tanjiro, a kindhearted boy who sells charcoal for a living, finds his family slaughtered by a demon. To make matters worse, his younger sister Nezuko, the sole survivor, has been transformed into a demon herself. Though devastated by this grim reality, Tanjiro resolves to become a “demon slayer” so that he can turn his sister back into a human, and kill the demon that massacred his family.</div>
+                    <button id="myBtn1">See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(../Resurse/blue-lock\ \(Catalog\).jpg);">
+                <div class="content">
+                    <div class="name">Blue Lock</div>
+                    <div class="des">Japan’s desire for World Cup glory leads the Japanese Football Association to launch a new rigorous training program to find the national team’s next striker. Three hundred high school players are pitted against each other for the position, but only one will come out on top. Who among them will be the striker to usher in a new era of Japanese soccer?</div>
+                    <button id="myBtn2">See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(../Resurse/One\ punch\ man\ \(catalog\).jpg);">
+                <div class="content">
+                    <div class="name">One Punch Man</div>
+                    <div class="des">Saitama started out being a hero just for fun. After three years of “special” training, he became so powerful that he can defeat opponents with a single punch. Now, alongsideGenos, his faithful cyborg disciple, Saitama is ready to begin his official duties as a professional hero working with the Hero Association. However, the frequency of monster appearances is surging and it increasingly appears as if the Great Seer Madame Shibabawa’s prediction about the Earth’s doom is coming true. In the midst of this crisis, the “hero hunter” Garou makes his own appearance.</div>
+                    <button id="myBtn3">See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(../Resurse/ERASED\(catalog\).jpg);">
+                <div class="content">
+                    <div class="name">Erased</div>
+                    <div class="des">Satoru Fujinuma is a young manga artist struggling to make a name for himself following his debut. But, that was not the only thing in his life that Satoru was feeling frustrated about…he was also living with a strange condition only he was able to experience. A strange phenomenon where one is transferred back to the moment right before something life-threatening occurs. This continues to happen until the cause of the threat is erased. It is as if somebody is forcing Satoru to stop it from happening.</div>
+                    <button id="myBtn4">See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(../Resurse/berserk\(catalog\).jpg)">
+                <div class="content">
+                    <div class="name">Berserk</div>
+                    <div class="des">When lone swordsman Guts is defeated in a duel by Griffith, ambitious leader of the Band of the Hawk mercenaries, he now must fight for him. Distrustful of all at first, through hard-fought battles, he soon begins to bond with his new comrades and their leader. As they rise in rank to a full-fledged army, he begins to harbor doubts about a life lived by the blade, unaware a dreadful fate awaits.</div>
+                    <button id="myBtn5">See More</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </div>
+    
+<!--Jujutsu Kaisen-->
+
+<div class="modal" id="myModal" style="display: none;">
+<!--content-->
+<div class="modal-content">
+<!--Header-->
+<div class="modal-header">
+    <span class="close">×</span>
+    <h2>Jujutsu Kaisen</h2>
+</div>
+<!--Body-->
+<div class="modal-body">
+    <p class="paragraf">Trailer: </p>
+    <video src="../Videos/y2mate.is - JUJUTSU KAISEN OFFICIAL TRAILER-pkKu9hLT-t8-1080pp-1705073463.mp4" width="80%" height="50%" controls poster="../Resurse/jujutsu kaisen trailer.jpg"></video>
+    <p class="paragraf">Characters: </p>
+    <hr>
+
+    <table style="width: 50%; border: 1;">
+        <tbody>
+        <tr>
+        <td>
+            <div class="caracter">
+            <img src="../Resurse/gojo.jpg" alt="" width="70px">
+            <div class="descript">
+            <p>Gojo Satoru</p>
+            <p>Main</p>
+            </div>
+            </div>
+        </td>
+        <td>
+            <div class="caracter">
+            <img src="../Resurse/itadori.jpg" alt="" width="70px">
+            <div class="descript">
+            <p>Itadori Yuuji</p>
+            <p>Main</p>
+            </div>
+            </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            <div class="caracter">
+            <img src="../Resurse/megumi.jpg" alt="" width="70px">
+            <div class="descript">
+            <p>Fushiguro Megumi</p>
+            <p>Main</p>
+            </div>
+            </div>
+        </td>
+        <td>
+            <div class="caracter">
+            <img src="../Resurse/nanami.jpg" alt="" width="70px">
+            <div class="descript">
+            <p>Nanami Kento</p>
+            <p>Supporting</p>
+            </div>
+            </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            <div class="caracter">
+            <img src="../Resurse/sukuna.jpg" alt="" width="70px">
+            <div class="descript">
+            <p>Ryoumen Sukuna</p>
+            <p>Supporting</p>
+            </div>
+            </div></td>
+        <td>
+            <div class="caracter">
+            <img src="../Resurse/toge.jpg" alt="" width="70px">
+            <div class="descript">
+            <p>Inumaki Toge</p>
+            <p>Suppoprting</p>
+            </div>
+            </div>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            <div class="caracter">
+            <img src="../Resurse/getou.jpg" alt="" width="70px">
+            <div class="descript">
+            <p>Getou Suguru</p>
+            <p>Supporting</p>
+            </div>
+            </div>
+        </td>
+        <td>
+            <div class="caracter">
+            <img src="../Resurse/toudou.jpg" alt="" width="70px">
+            <div class="descript">
+            <p>Toudou Aoi</p>
+            <p>supporting</p>
+            </div>
+            </div>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+
+        
+    </div>
+    </div>
+</div>
+
+
+<!--Demon Slayer-->
+<div class="modal" id="myModal1" style="display: none;">
+    <!--content-->
+    <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header">
+            <span class="close1">×</span>
+            <h2>Demon Slayer</h2>
+        </div>
+        <!--Body-->
+        <div class="modal-body">
+            <p class="paragraf">Trailer: </p>
+            <video src="../Videos/y2mate.is - Demon Slayer Kimetsu no Yaiba Swordsmith Village Arc OFFICIAL TRAILER-9DhuWapDDrw-1080pp-1705073658.mp4" width="80%" height="50%" controls poster="../Resurse/demon slayer trailer.jpg"></video>
+            <p class="paragraf">Characters: </p>
+            <hr>
+
+            <table style="width: 50%; border: 1;">
+                <tbody>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/tanjiro.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Kamado Tanjiro</p>
+                    <p>Main</p>
+                    </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/zenitsu.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Agatsuma Zenitsu</p>
+                    <p>Main</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/nezuko.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Kamado Nezuko</p>
+                    <p>Main</p>
+                    </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/inosuke.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Hashibiria Inosuke</p>
+                    <p>Main</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/rengoku.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Rengoku Kyoujurou</p>
+                    <p>Supporting</p>
+                    </div>
+                    </div></td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/shinobu.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Kochou Shinobu</p>
+                    <p>Suppoprting</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/giyuu.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Tomioka Giyuu</p>
+                    <p>Supporting</p>
+                    </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/uzui.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Uzui Tengen</p>
+                    <p>Supporting</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+
+
+                
+            </div>
+            </div>
+        </div>
+
+
+<!--Blue Lock-->
+    <div class="modal" id="myModal2" style="display: none;">
+        <!--content-->
+        <div class="modal-content">
+            <!--Header-->
+        <div class="modal-header">
+            <span class="close2">×</span>
+            <h2>Blue Lock</h2>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+                <p class="paragraf">Trailer: </p>
+                <video src="../Videos/y2mate.is - BLUELOCK OFFICIAL TRAILER-IVsII3dLbWc-1080pp-1705073535.mp4" width="80%" height="50%" controls poster="../Resurse/blue lock trailer.jpg"></video>
+                <p class="paragraf">Characters: </p>
+                <hr>
+
+                <table style="width: 50%; border: 1;">
+                    <tbody>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/bachira.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Bachira Meguru</p>
+                    <p>Main</p>
+                    </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/isagi.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Isagi Yoichi</p>
+                    <p>Main</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/rensuke.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Kunigami Rensuke</p>
+                    <p>Main</p>
+                    </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/nagi.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Nagi Sheishirou</p>
+                    <p>Supporting</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/barou.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Barou Shouei</p>
+                    <p>Supporting</p>
+                    </div>
+                    </div></td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/rin.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Itoshi Rin</p>
+                    <p>Suppoprting</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/reo.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Mikage Reo</p>
+                    <p>Supporting</p>
+                    </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/sae.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Itoshi Sae</p>
+                    <p>Supporting</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+
+</main>
+
+
+<!--One Punch Man-->
+<div class="modal" id="myModal3" style="display: none;">
+    <!--content-->
+    <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header">
+            <span class="close3">×</span>
+            <h2>One Punch Man</h2>
+        </div>
+        <!--Body-->
+        <div class="modal-body">
+            <p class="paragraf">Trailer: </p>
+            <video src="../Videos/y2mate.is - One Punch Man English Dub Trailer Toonami-YUH1mfV3IEU-480pp-1705073821.mp4" width="80%" height="50%" controls poster="../Resurse/one punch man trailer.jpg"></video>
+            <p class="paragraf">Characters: </p>
+            <hr>
+
+            <table style="width: 50%; border: 1;">
+                <tbody>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/saitama.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Saitama</p>
+                    <p>Main</p>
+                    </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/genos.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Genos</p>
+                    <p>Main</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/garou.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Garou</p>
+                    <p>Suppoprting</p>
+                    </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/tatsumaki.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Tatsumaki</p>
+                    <p>Suppoprting</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/mumen.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Mumen Rider</p>
+                    <p>Supporting</p>
+                    </div>
+                    </div></td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/fubuki.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Fubuki</p>
+                    <p>Suppoprting</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/sonic.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Speed-o'-Sound Sonic</p>
+                    <p>Supporting</p>
+                    </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/bat.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Metal Bat</p>
+                    <p>Supporting</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+
+
+                
+            </div>
+            </div>
+        </div>
+
+<!--Erased-->
+<div class="modal" id="myModal4" style="display: none;">
+    <!--content-->
+    <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header">
+            <span class="close4">×</span>
+            <h2>Erased</h2>
+        </div>
+        <!--Body-->
+        <div class="modal-body">
+            <p class="paragraf">Trailer: </p>
+            <video src="../Videos/y2mate.is - ERASED English Trailer-DwmxEAWjTQQ-1080pp-1705073703.mp4" width="80%" height="50%" controls poster="../Resurse/erased trailer.jpg"></video>
+            <p class="paragraf">Characters: </p>
+            <hr>
+
+            <table style="width: 50%; border: 1;">
+                <tbody>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/satoru.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Fujinuma Satoru</p>
+                    <p>Main</p>
+                    </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/hinazuke.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Hinazuki Kayo</p>
+                    <p>Main</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/fujinuma.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Fujinuma Sachiko</p>
+                    <p>Suppoprting</p>
+                    </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/kenya.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Kobayashi Kenya</p>
+                    <p>Suppoprting</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/gaku.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Yashiro Gaku</p>
+                    <p>Supporting</p>
+                    </div>
+                    </div></td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/sugita.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Sugita Hiromi</p>
+                    <p>Suppoprting</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/osamu.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Osamu</p>
+                    <p>Supporting</p>
+                    </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/akemi.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Hinazuki Akemi</p>
+                    <p>Supporting</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+
+
+                
+            </div>
+            </div>
+        </div>
+
+<!--Berserk-->
+<div class="modal" id="myModal5" style="display: none;">
+    <!--content-->
+    <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header">
+            <span class="close5">×</span>
+            <h2>Berserk</h2>
+        </div>
+        <!--Body-->
+        <div class="modal-body">
+            <p class="paragraf">Trailer: </p>
+            <video src="../Videos/y2mate.is - Berserk The Golden Age Arc Memorial Edition OFFICIAL TRAILER-H6dkuEdzaFY-1080pp-1705073583.mp4" width="80%" height="50%" controls poster="../Resurse/berserk trailer.jpg"></video>
+            <p class="paragraf">Characters: </p>
+            <hr>
+
+            <table style="width: 50%; border: 1;">
+                <tbody>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/guts.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Guts</p>
+                    <p>Main</p>
+                    </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/griffith.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Griffith</p>
+                    <p>Main</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/casca.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Casca</p>
+                    <p>Main</p>
+                    </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/judeau.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Judeau</p>
+                    <p>Suppoprting</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/pippin.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Pippin</p>
+                    <p>Supporting</p>
+                    </div>
+                    </div></td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/rickert.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Rickert</p>
+                    <p>Suppoprting</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/godo.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Godo</p>
+                    <p>Supporting</p>
+                    </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="caracter">
+                    <img src="../Resurse/zodd.jpg" alt="" width="70px">
+                    <div class="descript">
+                    <p>Nosferatu Zodd</p>
+                    <p>Supporting</p>
+                    </div>
+                    </div>
+                </td>
+                </tr>
+                </tbody>
+                </table>
+
+            </div>
+            </div>
+        </div>
+
+<div id="genre-buttons">
+    <button class="genre-button" onclick="filterMovies('all')">All</button>
+    <button class="genre-button" onclick="filterMovies('actiune')">Action</button>
+    <button class="genre-button" onclick="filterMovies('drama')">Drama</button>
+    <button class="genre-button" onclick="filterMovies('comedie')">Comedy</button>
+    <button class="genre-button" onclick="filterMovies('aventura')">Adventure</button>
+    <button class="genre-button" onclick="filterMovies('sport')">Sport</button>
+    </div>
+    <hr>
+
+    <div id="movies-list">
+    <div class="movie" data-genre="actiune">
+        <img src="../Resurse/Jujutsu Kaisen.jpg" alt="" width="350px" height="600px">
+        <p>Jujutsu Kaisen</p>
+    </div>
+    <div class="movie" data-genre="aventura">
+        <img src="../Resurse/Fullmetal Alchemist.jpg" alt="" width="350px" height="600px">
+        <p>Fullmetal Alchemist</p>
+    </div>
+    <div class="movie" data-genre="actiune">
+        <img src="../Resurse/Attack on Titan.jpg" alt="" width="350px" height="600px">
+        <p>Attack on Titan</p>
+    </div>
+    <div class="movie" data-genre="drama">
+        <img src="../Resurse/A Silent Voice.jpg" alt="" width="350px" height="600px">
+        <p>A Silent Voice</p>
+    </div>
+    <div class="movie" data-genre="comedie">
+        <img src="../Resurse/Spy x Family.jpg" alt="" width="350px" height="600px">
+        <p>Spy x Family</p>
+    </div>
+    <div class="movie" data-genre="drama">
+        <img src="../Resurse/You Lie In April.jpg" alt="" width="350px" height="600px">
+        <p>You Lie In April</p>
+    </div>
+    <div class="movie" data-genre="aventura">
+        <img src="../Resurse/Demon Slayer.jpg" alt="" width="350px" height="600px">
+        <p>Demon Slayer</p>
+    </div>
+    <div class="movie" data-genre="aventura">
+        <img src="../Resurse/Hunter x Hunter.jpg" alt="" width="350px" height="600px">
+        <p>Hunter x Hunter</p>
+    </div>
+    <div class="movie" data-genre="comedie">
+        <img src="../Resurse/K-ON.jpg" alt="" width="350px" height="600px">
+        <p>K-On</p>
+    </div>
+    <div class="movie" data-genre="actiune">
+        <img src="../Resurse/Chainsaw Man.jpg" alt="" width="350px" height="600px">
+        <p>Chainsaw Man</p>
+    </div>
+    <div class="movie" data-genre="sport">
+        <img src="../Resurse/Blue Lock.jpg" alt="" width="350px" height="600px">
+        <p>Blue Lock</p>
+    </div>
+    <div class="movie" data-genre="drama">
+        <img src="../Resurse/Charlotte.jpg" alt="" width="350px" height="600px">
+        <p>Charlotte</p>
+    </div>
+    <div class="movie" data-genre="actiune">
+        <img src="../Resurse/Cowboy Bebop.jpg" alt="" width="350px" height="600px">
+        <p>Cowboy Bebop</p>
+    </div>
+    <div class="movie" data-genre="sport">
+        <img src="../Resurse/Haikyuu!.jpg" alt="" width="350px" height="600px">
+        <p>Haikyuu</p>
+    </div>
+    <div class="movie" data-genre="comedie">
+        <img src="../Resurse/The Disastrous Life of Saiki K..jpg" alt="" width="350px" height="600px">
+        <p>The Disastrous Life of Saiki K</p>
+    </div>
+    <div class="movie" data-genre="aventura">
+        <img src="../Resurse/One Piece.jpg" alt="" width="350px" height="600px">
+        <p>One Pice</p>
+    </div>
+    <div class="movie" data-genre="actiune">
+            <img src="../Resurse/Cyberpunk.jpg" alt="" width="350px" height="600px">
+            <p>Cyberpunk: Edgerunners</p>
+    </div>
+    <div class="movie" data-genre="drama">
+        <img src="../Resurse/Your Name.jpg" alt="" width="350px" height="600px">
+        <p>Your Name</p>
+    </div>
+    <div class="movie" data-genre="aventura">
+        <img src="../Resurse/Sword art Online.jpg" alt="" width="350px" height="600px">
+        <p>Sword Art Online</p>
+    </div>
+    <div class="movie" data-genre="sport">
+        <img src="../Resurse/Koruko no Baschet.jpg" alt="" width="350px" height="600px">
+        <p>Kuroko no Basket</p>
+    </div>
+    <div class="movie" data-genre="aventura">
+        <img src="../Resurse/Dr.Stone.jpg" alt="" width="350px" height="600px">
+        <p>Dr.Stone</p>
+    </div>
+    <div class="movie" data-genre="actiune">
+        <img src="../Resurse/Mob 100.jpg" alt="" width="350px" height="600px">
+        <p>Mob Psycho 100</p>
+    </div>
+    <div class="movie" data-genre="comedie">
+        <img src="../Resurse/Soul Easter.jpg" alt="" width="350px" height="600px">
+        <p>Soul Easter</p>
+    </div>
+    <div class="movie" data-genre="sport">
+        <img src="../Resurse/Baki.jpg" alt="" width="350px" height="600px">
+        <p>Baki</p>
+    </div>
+    <div class="movie" data-genre="drama">
+        <img src="../Resurse/Violet Evergarden.jpg" alt="" width="350px" height="600px">
+        <p>Violet Evergarden</p>
+    </div>
+    <div class="movie" data-genre="comedie">
+        <img src="../Resurse/Assasination classroom.jpg" alt="" width="350px" height="600px">
+        <p>Assasination Classroom</p>
+    </div>
+    <div class="movie" data-genre="sport">
+        <img src="../Resurse/Run with the Wind.jpg" alt="" width="350px" height="600px">
+        <p>Run with the Wind</p>
+    </div>
+    <div class="movie" data-genre="comedie">
+        <img src="../Resurse/Himouto! Umaru-chan.jpg" alt="" width="350px" height="600px">
+        <p>Himouto! Umaru-chan</p>
+    </div>
+    <div class="movie" data-genre="drama">
+        <img src="../Resurse/Death Parade.jpg" alt="" width="350px" height="600px">
+        <p>Death Parade/p>
+    </div>
+    <div class="movie" data-genre="sport">
+        <img src="../Resurse/One Outs.jpg" alt="" width="350px" height="600px">
+        <p>One Outs</p>
+    </div>
+
+    </div>
+
+<!--Footer-->
+<footer class="site-footer">
+    <div class="footer-links">
+        <ul>
+          <li><a href="../Home Page/Home-Page.html" target="_blank">Home</a></li>
+          <li><a href="../Catalog/Catalog-Page.html" target="_blank">Catalog</a></li>
+          <li><a href="../News/News-Page.html" target="_blank">News</a></li>
+          <li><a href="../Manga/Manga-Page.html">Manga</a></li>
+          <li><a href="../Login-Singin/Login-Singin-Page.html">Login/Singin</a></li>
+        </ul>
+      </div>
+
+    <div class="footer-socials">
+        <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Tumblr</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-anime-image">
+        <img src="https://i1.wp.com/picult.com/avatar/100px-avatar/1145877646822.gif" alt="Anime picture" width="100">
+        <p>Thanks for coming!</p>
+    </div>
+
+    </footer>
+    <div class="footer-copyright">
+    <p>&copy; 2022 Anime Site. All rights reserved.</p>
+    </div>
+    <script src="../Catalog/Catalog-Page-script.js"></script>
+
+</body>
+</html>

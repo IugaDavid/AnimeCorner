@@ -1,0 +1,938 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+/*Header*/
+body{
+    background-color: rgb(36, 35, 35);
+}
+
+header{
+    background-color: black;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: var(--color2);
+    padding: 12px 20px;
+}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {display: none;}
+
+.png{
+    position: absolute;
+    left: 64%;
+    top: 150px;
+}
+
+.manga{
+    display: none;
+}
+
+.img{
+    width: 90%;
+    height: 1000px;
+    margin-left: 5%;
+}
+
+
+.best-manga{
+    position: relative;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 5%;
+    border-radius: 3px 0 0 3px;
+}
+.prev{
+    left: 5%;
+}
+  
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+  
+  .text {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+  }
+
+  .content{
+    position: absolute;
+    top: 20%;
+    left: 47%;
+    width: 400px;
+    height: 240px;
+    color: #eee;
+    animation: animate 1s ease-in-out 1 forwards;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.descr{
+    width: 450px;
+    color: white;
+    position: absolute;
+    left: 43%;
+    top: 300px;
+    font-size: 24px;
+    animation: animate 1s ease-in-out 1 forwards;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.title{
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    right: 71%;
+    top: 340px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.title1{
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    right: 45%;
+    top: 170px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.description{
+    color: white;
+    position: absolute;
+    top: 430px;
+    width: 400px;
+    left: 14%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 24px;
+}
+
+.description1{
+    color: white;
+    position: absolute;
+    top: 430px;
+    width: 450px;
+    left: 15.5%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 24px;
+}
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+
+.top10{
+    color: white;
+    margin-left: 5%;
+    margin-top: 20px;
+}
+
+.hr1{
+    width: 90%;
+    margin-left: 5%;
+}
+
+.slides{
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img{
+    width: 100%;
+    height: 265px;
+}
+
+.new-anime{
+    width: 13%;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+#carousel-container {
+    width: 83%;
+    margin: 50px auto;
+  }
+
+  .glide {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .glide__track {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .glide__slides {
+    display: flex;
+  }
+
+  .glide__slide {
+    flex: 0 0 auto;
+    width: 25%; 
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .glide img {
+    width: 100%;
+    height: 250px;
+    display: block;
+  }
+
+.name-anime{
+    color: white;
+    padding: 2px 12px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.release{
+    color: white;
+    padding: 2px 12px;
+    line-height: 10px;
+    margin-bottom: 50px;
+    line-height: 40px;
+}
+
+.Name-Release{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.checked {
+    color: orange;
+}
+
+.star{
+    width: 100%;
+    margin-top: -30px;
+}
+
+.star-rating{
+    margin-left: 10px;
+}
+
+
+
+
+.movie {
+    margin-bottom: 10px;
+    padding: 30px;
+
+}
+
+#movies-list{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    overflow: hidden;
+    margin-left: 7%;
+}
+
+#movies-list p{
+    color: white;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 3%;
+    margin-top: -5%;
+    display: flex;
+    flex-direction: column;
+    bottom: 3px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    
+}
+
+
+#genre-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+}
+.genre-button{
+    width: 100px;
+    height: 42px;
+    border-radius: 7px;
+    background-color: #424040;
+    margin-right: 20px;
+    cursor: pointer;
+}
+#genre-buttons :hover{
+    background-color: rgb(19, 18, 18);
+    color: white;
+    transform: scale(1.1);
+}
+
+.rating{
+    margin-left: 12px;
+}
+
+
+/*Footer*/
+.site-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    width: 100%;
+    height: 350px;
+    background-color: #1f1f1f;
+    color: #fff;
+   }
+   
+   .footer-links ul,
+   .footer-socials ul {
+    list-style: none;
+    padding-left: 25%;
+    padding-top: 15%;
+   }
+   
+   .footer-links li,
+   .footer-socials li {
+    margin-bottom: 8px;
+   }
+   
+   .footer-links a,
+   .footer-socials a {
+    color: #fff;
+    text-decoration: none;
+   }
+   
+   .footer-links a:hover,
+   .footer-socials a:hover {
+    text-decoration: underline;
+   }
+   
+   .footer-anime-image {
+    text-align: center;
+   }
+   
+   .footer-anime-image img {
+    max-width: 100%;
+    height: auto;
+   }
+   
+   .footer-copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+    background-color: #1f1f1f;
+    color: #fff;
+    padding-bottom: 40px;
+   }
+
+@media only screen and (max-width: 600px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: rgb(66, 65, 65);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+    .png{
+        position: absolute;
+        left: 64%;
+        top: 150px;
+    }
+    
+    .manga{
+        display: none;
+    }
+    
+    .img{
+        width: 95%;
+        height: 500px;
+        margin-left: 3%;
+    }
+    
+    
+    .best-manga{
+        position: relative;
+    }
+    
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+    
+    .next {
+        right: 5%;
+        border-radius: 3px 0 0 3px;
+    }
+    .prev{
+        left: 5%;
+    }
+      
+    
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+      
+      
+      .text {
+        width: 200px;
+        margin-left: -26px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 25px;
+        animation: animate 1s ease-in-out 0.3s 1 forwards;
+      }
+    
+      .content{
+        position: absolute;
+        top: 20%;
+        left: 47%;
+        width: 400px;
+        height: 240px;
+        color: #eee;
+        animation: animate 1s ease-in-out 1 forwards;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+    
+    .descr{
+        width: 300px;
+        color: white;
+        position: absolute;
+        left: 13%;
+        top: 150px;
+        font-size: 15px;
+        animation: animate 1s ease-in-out 1 forwards;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+    
+    .title{
+        position: absolute;
+        color: white;
+        font-size: 25px;
+        right: 42%;
+        top: 100px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .title1{
+        position: absolute;
+        color: white;
+        font-size: 50px;
+        right: 52%;
+        top: 70px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+    
+    
+    .description{
+        color: white;
+        position: absolute;
+        top: 130px;
+        width: 300px;
+        left: 14%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        font-size: 14px;
+    }
+    
+    .description1{
+        color: white;
+        position: absolute;
+        top: 360px;
+        width: 300px;
+        left: 15.5%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        font-size: 14px;
+    }
+    
+
+    .slides{
+        display: flex;
+        flex-direction: row;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .slides img{
+        width: 100%;
+        height: 265px;
+    }
+    
+    .new-anime{
+        width: 40%;
+        color: white;
+        font-size: 25px;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+    }
+    
+    #carousel-container {
+        width: 90%;
+        margin: 50px auto;
+      }
+    
+      .glide {
+        width: 100%;
+        overflow: hidden;
+      }
+    
+      .glide__track {
+        width: 100%;
+        overflow: hidden;
+      }
+    
+      .glide__slides {
+        display: flex;
+      }
+    
+      .glide__slide {
+        flex: 0 0 auto;
+        width: 95%; 
+        padding-left: 90px;
+        padding-right: 90px;
+      }
+    
+      .glide img {
+        width: 150px;
+        height: 250px;
+        display: block;
+      }
+    
+    .name-anime{
+        margin-top: 150px;
+        margin-left: -99px;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100px;
+        color: white;
+        padding: 2px 12px;
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .release{
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 200px;
+        width: 140px;
+        height: 100px;
+        color: white;
+        font-size: 15px;
+        margin-left: -99px;
+        padding: 0px 0px;
+        margin-bottom: 0px;
+        line-height: 40px;
+    }
+    
+    .Name-Release{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .checked {
+        color: orange;
+    }
+    
+    .star{
+        width: 100%;
+        margin-top: -10px;
+    }
+    
+    .star-rating{
+        margin-left: 10px;
+    }
+
+    .rating{
+        margin-left: -96px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .movie {
+        margin-bottom: 10px;
+        padding: 1px;
+    
+    }
+    
+    #movies-list{
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: flex-start; 
+        align-items: flex-start; 
+        overflow: hidden;
+        margin-left: 7%;
+    }
+    
+    #movies-list p{
+        color: white;
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+        margin-bottom: 3%;
+        margin-top: -5%;
+        display: flex;
+        flex-direction: column;
+        bottom: 3px;
+        position: relative;
+        background: rgba(0, 0, 0, 0.5);
+        
+    }
+}
+
+@media only screen and (max-width: 2000px){
+    .png{
+        position: absolute;
+        left: 64%;
+        top: 150px;
+    }
+    
+    .manga{
+        display: none;
+    }
+    
+    .img{
+        width: 100%;
+        height: 500px;
+        margin-left: 0%;
+    }
+    
+    
+    .best-manga{
+        position: relative;
+    }
+    
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+    
+    .next {
+        right: 5%;
+        border-radius: 3px 0 0 3px;
+    }
+    .prev{
+        left: 5%;
+    }
+      
+    
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+      
+      
+      .text {
+        width: 200px;
+        margin-left: -26px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 25px;
+        animation: animate 1s ease-in-out 0.3s 1 forwards;
+      }
+    
+      .content{
+        position: absolute;
+        top: 20%;
+        left: 47%;
+        width: 400px;
+        height: 240px;
+        color: #eee;
+        animation: animate 1s ease-in-out 1 forwards;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+    
+    .descr{
+        width: 300px;
+        color: white;
+        position: absolute;
+        left: 13%;
+        top: 150px;
+        font-size: 15px;
+        animation: animate 1s ease-in-out 1 forwards;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+    
+    .title{
+        position: absolute;
+        color: white;
+        font-size: 25px;
+        right: 42%;
+        top: 100px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .title1{
+        position: absolute;
+        color: white;
+        font-size: 50px;
+        right: 52%;
+        top: 70px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+    
+    
+    .description{
+        color: white;
+        position: absolute;
+        top: 130px;
+        width: 300px;
+        left: 14%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        font-size: 14px;
+    }
+    
+    .description1{
+        color: white;
+        position: absolute;
+        top: 360px;
+        width: 300px;
+        left: 15.5%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        font-size: 14px;
+    }
+
+    .slides{
+        display: flex;
+        flex-direction: row;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .slides img{
+        width: 100%;
+        height: 265px;
+    }
+    
+    .new-anime{
+        width: 40%;
+        color: white;
+        font-size: 25px;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+    }
+    
+    #carousel-container {
+        width: 90%;
+        margin: 50px auto;
+      }
+    
+      .glide {
+        width: 100%;
+        overflow: hidden;
+      }
+    
+      .glide__track {
+        width: 100%;
+        overflow: hidden;
+      }
+    
+      .glide__slides {
+        display: flex;
+      }
+    
+      .glide__slide {
+        flex: 0 0 auto;
+        width: 95%; 
+        padding-left: 90px;
+        padding-right: 90px;
+      }
+    
+      .glide img {
+        width: 150px;
+        height: 250px;
+        display: block;
+      }
+    
+    .name-anime{
+        margin-top: 150px;
+        margin-left: -99px;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100px;
+        color: white;
+        padding: 2px 12px;
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .release{
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 200px;
+        width: 140px;
+        height: 100px;
+        color: white;
+        font-size: 15px;
+        margin-left: -120px;
+        padding: 0px 0px;
+        margin-bottom: 0px;
+        line-height: 40px;
+    }
+    
+    .Name-Release{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .checked {
+        color: orange;
+    }
+    
+    .star{
+        width: 100%;
+        margin-top: -10px;
+    }
+    
+    .star-rating{
+        margin-left: 10px;
+    }
+
+    .rating{
+        margin-left: -99px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .movie {
+        margin-bottom: 10px;
+        padding: 1px;
+    
+    }
+    
+    #movies-list{
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; 
+        align-items: center; 
+        overflow: hidden;
+        margin-left: 11%;
+    }
+    
+    #movies-list p{
+        color: white;
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+        margin-bottom: 3%;
+        margin-top: -5%;
+        display: flex;
+        flex-direction: column;
+        bottom: 3px;
+        position: relative;
+        background: rgba(0, 0, 0, 0.5);
+        
+    }
+}

@@ -1,0 +1,1437 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+
+/*Header*/
+body{
+    width: 100%;
+    background-color: rgb(36, 35, 35);
+}
+
+header{
+    background-color: black;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: var(--color2);
+    padding: 12px 20px;
+}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {display: none;}
+
+/*Animation design*/
+
+.home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    width: 90%;
+    height: 890px;
+}
+
+.home .imageSet1 img{
+    height: 400px;
+    position: absolute;
+    transform: translateX(-270%);
+    filter: drop-shadow(0 0 3px white);
+    scale: 0;
+    animation: PopUp 1s ease forwards, Bounce 4s ease infinite;
+    animation-delay: 0s, 4.5s;
+}
+
+@keyframes PopUp{
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+@keyframes Bounce{
+    0%, 100%{
+        transform: translateY(0) translateX(-270%);
+    }
+    50%{
+        transform: translateY(-8px) translateX(-270%);
+    }
+}
+
+
+.text-content{
+    max-width: 600px;
+    color: white;
+    margin: 15%;
+    line-height: 45px;
+}
+
+.text-content p{
+    line-height: 15px;
+}
+
+
+.imageSet1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.imageSet1 img:nth-child(2){
+    left: -190px;
+    z-index: -2;
+    scale: 0;
+    animation-delay: .7s;
+}
+
+.imageSet1 img:nth-child(3){
+    left: -190px;
+    z-index: -2;
+    animation-delay: 1.5s, 4.4s;
+}
+
+.imageSet1 img:nth-child(4){
+    left: 140px;
+    z-index: -2;
+    animation-delay: 1.7s, 4.5s;
+}
+
+.imageSet1 img:nth-child(5){
+    left: 155px;
+    top: -260px;
+    z-index: -3;
+    animation-delay: 2.5s, 5s;
+}
+
+.imageSet1 img:nth-child(6){
+    left: -20px;
+    top: -300px;
+    z-index: -3;
+    animation-delay: 3.5s, 5.2s;
+}
+
+.imageSet1 img:nth-child(7){
+    left: -100px;
+    top: -300px;
+    z-index: -3;
+    animation-delay: 3s, 5.1s;
+}
+
+.imageSet1 img:nth-child(8){
+    left: -155px;
+    top: -300px;
+    z-index: -3;
+    animation-delay: 1s, 4.7s;
+}
+
+.imageSet1 img:nth-child(9){
+    left: 25px;
+    top: -400px;
+    z-index: -4;
+    animation-delay: 4s, 3s;
+}
+
+.imageSet1 img:nth-child(10){
+    left: -260px;
+    top: -400px;
+    height: 500px;
+    z-index: -5;
+    animation-delay: 4.5s, 5.4s;
+}
+
+/*Trending*/
+
+.trending{
+    width: 100%;
+    max-width: 85%;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 5%;
+    margin-top: -5%;
+    
+}
+
+.trend{
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+}
+
+.Image-Name{
+    color: white;
+    width: 217px;
+    padding: 15px;
+    
+}
+
+
+.Name-Anime{
+    color: white;
+    padding: 2px 12px;
+    font-size: 20px;
+}
+
+.Year-Genre{
+    color: white;
+    padding: 2px 12px;
+    line-height: 10px;
+    font-size: medium;
+}
+.Name-Year-Genre{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    bottom:46px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.checked {
+    color: orange;
+}
+
+.star{
+    width: 100%;
+    margin-top: -30px;
+}
+
+.slides{
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img{
+    width: 100%;
+    height: 265px;
+}
+
+.new-anime{
+    width: 13%;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+#carousel-container {
+    width: 83%;
+    margin: 50px auto;
+  }
+
+  .glide {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .glide__track {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .glide__slides {
+    display: flex;
+  }
+
+  .glide__slide {
+    flex: 0 0 auto;
+    width: 25%; 
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .glide img {
+    width: 100%;
+    height: 250px;
+    display: block;
+  }
+
+.name-anime{
+    color: white;
+    padding: 2px 12px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.release{
+    color: white;
+    padding: 2px 12px;
+    line-height: 10px;
+    margin-bottom: 50px;
+    line-height: 40px;
+}
+
+.Name-Release{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/*Should Watch*/
+
+.should-watch-title{
+    color: white;
+    margin-left: 8%;
+}
+
+
+.carousel-container {
+    position: relative;
+    width: 1500px;
+    margin-left: 75px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow: hidden;
+  }
+  
+.carousel p{
+    font-size: 23px;
+}
+
+.carousel h2{
+    margin-top: 10px;
+    color: white;
+    display: flex;
+}
+
+  
+  .slide img {
+    width: 1200;
+    height: 600px;
+  }
+  
+  .slide p {
+    margin-top: 10px;
+    color: white;
+    display: flex;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+
+.Should-watch-genres{
+    display: flex;
+    flex-direction: row;
+    margin-left: 6%;
+}
+
+/*Genre*/
+
+.Action{
+    width: 425px;
+    height: 200px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-genre{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.Action span{
+      top: 50%;
+      left: 50%;
+      transform: translate(-240px, -50%);
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+} 
+
+.Adventure{
+    width: 450px;
+    height: 200px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adventure-genre{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.genre-img{
+    width: 500px; 
+    height: 170px; 
+    border-radius: 10px;
+}
+
+.Adventure span{
+      top: 50%;
+      left: 50%;
+      transform: translate(-250px, -50%);
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+}
+
+.Sport{
+    width: 420px;
+    height: 200px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sport-genre{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.Sport span{
+      top: 50%;
+      left: 50%;
+      transform: translate(-250px, -50%);
+      text-align: center;    
+      background: rgba(0, 0, 0, 0.5);
+}
+.genres {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/*Footer*/ 
+
+
+.site-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    width: 100%;
+    height: 350px;
+    background-color: #1f1f1f;
+    color: #fff;
+   }
+   
+   .footer-links ul,
+   .footer-socials ul {
+    list-style: none;
+    padding-left: 25%;
+    padding-top: 15%;
+   }
+   
+   .footer-links li,
+   .footer-socials li {
+    margin-bottom: 8px;
+   }
+   
+   .footer-links a,
+   .footer-socials a {
+    color: #fff;
+    text-decoration: none;
+   }
+   
+   .footer-links a:hover,
+   .footer-socials a:hover {
+    text-decoration: underline;
+   }
+   
+   .footer-anime-image {
+    text-align: center;
+   }
+   
+   .footer-anime-image img {
+    max-width: 100%;
+    height: auto;
+   }
+   
+   .footer-copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+    background-color: #1f1f1f;
+    color: #fff;
+    padding-bottom: 40px;
+}
+
+
+
+@media only screen and (max-width: 2000px){
+    
+
+    .text-content{
+        color: white;
+        margin-left: 69px;
+
+    }
+
+
+
+    .home{
+        width: 100%;
+        height: 990px;
+    }
+
+
+    .home .imageSet1 img{
+        height: 380px;
+        position: absolute;
+        left: -800px;
+        top: -100px;
+        transform: translateX(-10%);
+    }
+
+    @keyframes Bounce{
+        0%, 100%{
+            transform: translateY(0) translateX(-10%);
+        }
+        50%{
+            transform: translateY(-8px) translateX(-10%);
+        }
+    }
+    
+    
+    .imageSet1 img:nth-child(2){
+        left: -645px;
+        top: -100px;
+        z-index: -2;
+        scale: 0;
+        animation-delay: .7s;
+    }
+    
+    .imageSet1 img:nth-child(3){
+        left: -555px;
+        top: -100px;
+        z-index: -2;
+        animation-delay: 1.5s, 4.4s;
+    }
+    
+    .imageSet1 img:nth-child(4){
+        left: -449px;
+        top: -100px;
+        z-index: -2;
+        animation-delay: 1.7s, 4.5s;
+    }
+    
+    .imageSet1 img:nth-child(5){
+        left: -325px;
+        top: -250px;
+        z-index: -3;
+        animation-delay: 2.5s, 5s;
+    }
+    
+    .imageSet1 img:nth-child(6){
+        left: -480px;
+        top: -250px;
+        z-index: -3;
+        animation-delay: 3.5s, 5.2s;
+    }
+    
+    .imageSet1 img:nth-child(7){
+        left: -620px;
+        top: -250px;
+        z-index: -3;
+        animation-delay: 3s, 5.1s;
+    }
+    
+    .imageSet1 img:nth-child(8){
+        left: -780px;
+        top: -250px;
+        z-index: -3;
+        animation-delay: 1s, 4.7s;
+    }
+    
+    .imageSet1 img:nth-child(9){
+        left: -450px;
+        top: -360px;
+        z-index: -4;
+        animation-delay: 4s, 3s;
+    }
+    
+    .imageSet1 img:nth-child(10){
+        left: -610px;
+        top: -340px;
+        height: 380px;
+        z-index: -5;
+        animation-delay: 4.5s, 5.4s;
+    }
+
+    .trending{
+        width: 85%;
+        max-width: 85%;
+        height: 400px;
+        margin: auto;
+        overflow: hidden;
+        margin-bottom: 5%;
+        margin-top: -5%;
+        
+    }
+    
+    .trend{
+        padding: 20px;
+        color: white;
+        font-size: 30px;
+    }
+    
+    .Image-Name{
+        color: white;
+        width: 217px;
+        padding: 15px;
+        
+    }
+    
+    
+    .Name-Anime{
+        color: white;
+        padding: 2px 12px;
+        font-size: 20px;
+    }
+    
+    .Year-Genre{
+        color: white;
+        padding: 2px 12px;
+        line-height: 10px;
+        font-size: medium;
+    }
+    .Name-Year-Genre{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        bottom:46px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    
+    .slides{
+        display: flex;
+        flex-direction: row;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .slides img{
+        width: 100%;
+        height: 265px;
+    }
+    
+    .new-anime{
+        width: 40%;
+        color: white;
+        font-size: 25px;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+    }
+    
+    #carousel-container {
+        width: 90%;
+        margin: 50px auto;
+      }
+    
+      .glide {
+        width: 100%;
+        overflow: hidden;
+      }
+    
+      .glide__track {
+        width: 100%;
+        overflow: hidden;
+      }
+    
+      .glide__slides {
+        display: flex;
+      }
+    
+      .glide__slide {
+        flex: 0 0 auto;
+        width: 95%; 
+        padding-left: 90px;
+        padding-right: 90px;
+      }
+    
+      .glide img {
+        width: 190px;
+        height: 250px;
+        display: block;
+      }
+    
+    .name-anime{
+        margin-top: 110px;
+        margin-left: -99px;
+        background: rgba(0, 0, 0, 0.5);
+        width: 160px;
+        color: white;
+        padding: 2px 12px;
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    .release{
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 200px;
+        width: 140px;
+        height: 100px;
+        color: white;
+        font-size: 15px;
+        margin-left: -99px;
+        padding: 0px 0px;
+        margin-bottom: 0px;
+        line-height: 40px;
+    }
+    
+    .should-watch-title{
+        color: white;
+        margin-left: 8%;
+    }
+    
+    
+    .carousel-container {
+        position: relative;
+        width: 1500px;
+        margin-left: 10px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      
+      .carousel {
+        display: flex;
+        overflow: hidden;
+      }
+      
+    .carousel p{
+        font-size: 23px;
+    }
+    
+    .carousel h2{
+        margin-top: 15px;
+        color: white;
+        display: flex;
+        font-size: 20px;
+    }
+    
+      
+      .slide img {
+        width: 98%;
+        height: 70%;
+      }
+      
+      .slide p {
+        margin-top: 10px;
+        color: white;
+        display: flex;
+        font-size: 12px;
+      }
+      
+      button {
+        position: absolute;
+        top: 30%;
+        transform: translateY(-50%);
+        background-color: #000000;
+        color: #fff;
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .prev {
+        left: 10px;
+      }
+      
+      .next {
+        right: 30px;
+      }
+    
+    .Should-watch-genres{
+        display: flex;
+        flex-direction: row;
+        margin-left: 1px;
+        height: 970px;
+    }
+
+    .Action{
+        height: 10px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .action-genre{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .Action span{
+          top: 50%;
+          left: 50%;
+          transform: translate(-240px, -50%);
+          text-align: center;
+          background: rgba(0, 0, 0, 0.5);
+    } 
+    
+    .Adventure{
+        height: 320px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .adventure-genre{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .genre-img{
+        width: 360px; 
+        height: 150px; 
+        border-radius: 10px;
+    }
+    
+    .Adventure span{
+          top: 50%;
+          left: 50%;
+          transform: translate(-250px, -50%);
+          text-align: center;
+          background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .Sport{
+        height: 100px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .sport-genre{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .Sport span{
+          top: 50%;
+          left: 50%;
+          transform: translate(-250px, -50%);
+          text-align: center;    
+          background: rgba(0, 0, 0, 0.5);
+    }
+    .genres {
+        display: flex;
+        flex-direction: column;
+        margin-left: 8%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    .Should-watch-genres{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-left: 1px;
+        height: 480px;
+    }
+
+}
+
+@media only screen and (max-width: 1379px){
+    .text-content{
+        width: 100%;
+        height: 100px;
+        color: white;
+        margin-left: 250px;
+        margin-top: -650px;
+    }
+
+    .carousel-container {
+        position: relative;
+        width: 2500px;
+        margin-left: 10px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      
+
+    .slide img {
+        width: 99%;
+        height: 50%;
+      }
+      
+      .genres {
+        display: none;
+        flex-direction: column;
+        margin-left: 8%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .home .imageSet1 img{
+        height: 380px;
+        position: absolute;
+        left: -800px;
+        top: 10px;
+        transform: translateX(-10%);
+    }
+
+    @keyframes Bounce{
+        0%, 100%{
+            transform: translateY(0) translateX(-10%);
+        }
+        50%{
+            transform: translateY(-8px) translateX(-10%);
+        }
+    }
+    
+    
+    .imageSet1 img:nth-child(2){
+        left: -645px;
+        top: 10px;
+        z-index: -2;
+        scale: 0;
+        animation-delay: .7s;
+    }
+    
+    .imageSet1 img:nth-child(3){
+        left: -555px;
+        top: 10px;
+        z-index: -2;
+        animation-delay: 1.5s, 4.4s;
+    }
+    
+    .imageSet1 img:nth-child(4){
+        left: -449px;
+        top: 10px;
+        z-index: -2;
+        animation-delay: 1.7s, 4.5s;
+    }
+    
+    .imageSet1 img:nth-child(5){
+        left: -325px;
+        top: -150px;
+        z-index: -3;
+        animation-delay: 2.5s, 5s;
+    }
+    
+    .imageSet1 img:nth-child(6){
+        left: -480px;
+        top: -150px;
+        z-index: -3;
+        animation-delay: 3.5s, 5.2s;
+    }
+    
+    .imageSet1 img:nth-child(7){
+        left: -620px;
+        top: -150px;
+        z-index: -3;
+        animation-delay: 3s, 5.1s;
+    }
+    
+    .imageSet1 img:nth-child(8){
+        left: -780px;
+        top: -150px;
+        z-index: -3;
+        animation-delay: 1s, 4.7s;
+    }
+    
+    .imageSet1 img:nth-child(9){
+        left: -450px;
+        top: -260px;
+        z-index: -4;
+        animation-delay: 4s, 3s;
+    }
+    
+    .imageSet1 img:nth-child(10){
+        left: -610px;
+        top: -260px;
+        height: 380px;
+        z-index: -5;
+        animation-delay: 4.5s, 5.4s;
+    }
+}
+
+
+
+@media only screen and (max-width: 800px){
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: rgb(66, 65, 65);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+
+
+    .text-content{
+        max-width: 250px;
+        color: white;
+        margin: 15%;
+        line-height: 45px;
+        position: absolute;
+        top: 19%;
+        left: 7%;
+    }
+    .home{
+        width: 100%;
+        height: 990px;
+    }
+    
+    .home .imageSet1 img{
+        height: 210px;
+        position: absolute;
+        left: 10px;
+        top: 89px;
+        transform: translateX(-10%);
+    }
+
+    @keyframes Bounce{
+        0%, 100%{
+            transform: translateY(0) translateX(-10%);
+        }
+        50%{
+            transform: translateY(-8px) translateX(-10%);
+        }
+    }
+    
+    
+    .imageSet1 img:nth-child(2){
+        left: 95px;
+        top: 89px;
+        z-index: -2;
+        scale: 0;
+        animation-delay: .7s;
+    }
+    
+    .imageSet1 img:nth-child(3){
+        left: 175px;
+        top: 89px;
+        z-index: -2;
+        animation-delay: 1.5s, 4.4s;
+    }
+    
+    .imageSet1 img:nth-child(4){
+        left: 240px;
+        top: 89px;
+        z-index: -2;
+        animation-delay: 1.7s, 4.5s;
+    }
+    
+    .imageSet1 img:nth-child(5){
+        left: 275px;
+        top: 5px;
+        z-index: -3;
+        animation-delay: 2.5s, 5s;
+    }
+    
+    .imageSet1 img:nth-child(6){
+        left: 200px;
+        top: 8px;
+        z-index: -3;
+        animation-delay: 3.5s, 5.2s;
+    }
+    
+    .imageSet1 img:nth-child(7){
+        left: 140px;
+        top: 5px;
+        z-index: -3;
+        animation-delay: 3s, 5.1s;
+    }
+    
+    .imageSet1 img:nth-child(8){
+        left: 40px;
+        top: 5px;
+        z-index: -3;
+        animation-delay: 1s, 4.7s;
+    }
+    
+    .imageSet1 img:nth-child(9){
+        left: 200px;
+        top: auto;
+        z-index: -4;
+        animation-delay: 4s, 3s;
+    }
+    
+    .imageSet1 img:nth-child(10){
+        left: 130px;
+        top: auto;
+        height: 200px;
+        z-index: -5;
+        animation-delay: 4.5s, 5.4s;
+    }
+
+    .trending{
+        width: 85%;
+        max-width: 85%;
+        height: 400px;
+        margin: auto;
+        overflow: hidden;
+        margin-bottom: 5%;
+        margin-top: -5%;
+        
+    }
+    
+    .trend{
+        padding: 20px;
+        color: white;
+        font-size: 30px;
+    }
+    
+    .Image-Name{
+        color: white;
+        width: 217px;
+        padding: 15px;
+        
+    }
+    
+    
+    .Name-Anime{
+        color: white;
+        padding: 2px 12px;
+        font-size: 20px;
+    }
+    
+    .Year-Genre{
+        color: white;
+        padding: 2px 12px;
+        line-height: 10px;
+        font-size: medium;
+    }
+    .Name-Year-Genre{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        bottom:46px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    
+    .slides{
+        display: flex;
+        flex-direction: row;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .slides img{
+        width: 100%;
+        height: 265px;
+    }
+    
+    .new-anime{
+        width: 40%;
+        color: white;
+        font-size: 25px;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+    }
+    
+    #carousel-container {
+        width: 90%;
+        margin: 50px auto;
+      }
+    
+      .glide {
+        width: 100%;
+        overflow: hidden;
+      }
+    
+      .glide__track {
+        width: 100%;
+        overflow: hidden;
+      }
+    
+      .glide__slides {
+        display: flex;
+      }
+    
+      .glide__slide {
+        flex: 0 0 auto;
+        width: 95%; 
+        padding-left: 90px;
+        padding-right: 90px;
+      }
+    
+      .glide img {
+        width: 190px;
+        height: 250px;
+        display: block;
+      }
+    
+    .name-anime{
+        margin-top: 110px;
+        margin-left: -99px;
+        background: rgba(0, 0, 0, 0.5);
+        width: 160px;
+        color: white;
+        padding: 2px 12px;
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+    .release{
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 200px;
+        width: 140px;
+        height: 100px;
+        color: white;
+        font-size: 15px;
+        margin-left: -99px;
+        padding: 0px 0px;
+        margin-bottom: 0px;
+        line-height: 40px;
+    }
+    
+    .should-watch-title{
+        color: white;
+        margin-left: 8%;
+    }
+    
+    
+    .carousel-container {
+        position: relative;
+        width: 1500px;
+        margin-left: 10px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      
+      .carousel {
+        display: flex;
+        overflow: hidden;
+      }
+      
+    .carousel p{
+        font-size: 23px;
+    }
+    
+    .carousel h2{
+        margin-top: 15px;
+        color: white;
+        display: flex;
+        font-size: 20px;
+    }
+    
+      
+      .slide img {
+        width: 100%;
+        height: 350px;
+      }
+      
+      .slide p {
+        margin-top: 10px;
+        color: white;
+        display: flex;
+        font-size: 12px;
+      }
+      
+      button {
+        position: absolute;
+        top: 30%;
+        transform: translateY(-50%);
+        background-color: #000000;
+        color: #fff;
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .prev {
+        left: 10px;
+      }
+      
+      .next {
+        right: 10px;
+      }
+    
+    .Should-watch-genres{
+        display: flex;
+        flex-direction: row;
+        margin-left: 1px;
+        height: 1000px;
+    }
+
+    .Action{
+        margin-left: 20px;
+        width: 350px;
+        height: 50px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .action-genre{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .Action span{
+          top: 50%;
+          left: 50%;
+          transform: translate(-160px, -50%);
+          text-align: center;
+          background: rgba(0, 0, 0, 0.5);
+    } 
+    
+    .Adventure{
+        margin-left: 35px;
+        width: 350px;
+        height: 200px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .adventure-genre{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .Adventure span{
+          top: 50%;
+          left: 50%;
+          transform: translate(-160px, -50%);
+          text-align: center;
+          background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .Sport{
+        margin-left: 20px;
+        width: 350px;
+        height: 60px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .sport-genre{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .Sport span{
+        top: 50%;
+        left: 50%;
+        transform: translate(-160px, -50%);
+        text-align: center;    
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .genres {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 2450px;
+        left: 5px;
+    }
+
+    .genre-img{
+        width: 300px; 
+        height: 100px; 
+        border-radius: 10px;
+    }
+
+    
+}
+

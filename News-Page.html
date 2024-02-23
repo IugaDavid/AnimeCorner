@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnimeCorner</title>
+<link rel="stylesheet" href="./News-Page-style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class='nav-bar'>
+                <img src="../Resurse/White logo - no background.png" width="150px">
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                    <li><a href="../Home Page/Home-Page.html" target="_blank">Home</a></li>
+                    <li><a href="../Manga/Manga-Page.html" target="_blank">Manga</a></li>
+                    <li><a href="../Catalog/Catalog-Page.html" target="_blank">Catalog</a></li>
+                    <li><a href="../News/News-Page.html" target="_blank">News</a></li>
+                    <li><a href="../Login-Singin/Login-Singin-Page.html" target="_blank">LogIn/Singin</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+        </header>
+<section>
+<div class="best-news">
+
+    <div class="news fade">
+      <img class="img" src="../Resurse/Haikyuu news.jpg">
+      <div class="content">
+      <div class="text">Haikyu!! FINAL Anime Film Shows Rivals Squaring off in IMAX Movie Poster</div>
+      <div class="posted-by">by: Kara Dennison</div>
+      <button id="myBtn">See More</button>
+      </div>
+    </div>
+    
+    <div class="news fade">
+      <img class="img" src="../Resurse/Demon Slayer News.jpg">
+      <div class="content">
+      <div class="text">Aniplex and Crunchyroll Announce Demon Slayer: Kimetsu no Yaiba -To the Hashira Training- Global Theatrical Dates</div>
+      <div class="posted-by">by: Kyle Cardine</div>
+      <button id="myBtn1">See More</button>
+      </div>
+    </div>
+    
+    <div class="news fade">
+      <img class="img" src="../Resurse/jujutsu kaisen news.avif">
+      <div class="content">
+      <div class="text">JJK: Visual Artist Creates Sukuna's Malevolent Shrine Domain Expansion in Singapore</div>
+      <div class="posted-by">by: Chike Nwaenie</div>
+      <button id="myBtn2">See More</button>
+      </div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+
+    <div class="modals" id="myModal" style="display: none;">
+        <!--content-->
+        <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header">
+            <span class="close">×</span>
+        </div>
+        <!--Body-->
+        <div class="modal-body">
+            <img src="../Resurse/Haikyuu news.jpg" width="70%" height="35%">
+            <p class="paragraf">Haikyu!! FINAL Anime Film Shows Rivals Squaring off in IMAX Movie Poster </p>
+            <p class="description">Last month, it was announced that the decisive volleyball match between Karasuno and Nekoma would be shown on IMAX screens in Japan when the first Haikyu!! FINAL anime film opens. And while we can't wait to see everyone on both teams in action, the new poster for the IMAX release shows what everyone's really here to see: the face-off between Hinata and Kenma.</p>
+            <p class="description">Toho Animation returns to produce the two Haikyu!! FINAL anime films with the animation continuing to be made by the team at Production I.G, including Susumu Mitsunaka as director and screenwriter, Takahiro Kishida as character designer and Takahiro Chiba as chief animation director. The first film, subtitled "Gomisuteba no Kessen,” is scheduled to be released in Japan on February 16, 2024.</p>
+            <p class="description">Haikyu!! ran in Weekly Shonen Jump from February 20, 2012, to July 20, 2020, with all 402 chapters collected into 45 volumes. All the chapters are available to read in English on the Shonen Jump app.</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="modal" id="myModal1" style="display: none;">
+            <!--content-->
+            <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+                <span class="close1">×</span>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+                <img src="../Resurse/Demon Slayer News.jpg" width="70%" height="35%">
+                <p class="paragraf">Aniplex and Crunchyroll Announce Demon Slayer: Kimetsu no Yaiba -To the Hashira Training- Global Theatrical Dates </p>
+                <p class="description">The next arc of Demon Slayer: Kimetsu no Yaiba is coming this year, and the Demon Slayer Corps are traveling across the world once again to get ready. Starting February 22, you can watch Demon Slayer: Kimetsu no Yaiba -To the Hashira Training- in global theaters to watch the Swordsmith Village Arc finale and get a sneak peek at the upcoming Hashira Training Arc Episode 1!</p>
+                <p class="description">Haruo Sotozaki directs Demon Slayer: Kimetsu no Yaiba at the anime studio ufotable, with Akira Matsushima as Chief Animation Director and Character Designer, and music by Yuki Kajiura and Go Shiina. The Demon Slayer: KImetsu no Yaiba Hashira Training Arc TV anime is scheduled to premiere in spring 2024 in Japan.</p>
+                </div>
+            </div>
+</section>
+<section>
+    <div class="modal" id="myModal2" style="display: none;">
+        <!--content-->
+        <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header">
+            <span class="close2">×</span>
+        </div>
+        <!--Body-->
+        <div class="modal-body">
+            <img src="../Resurse/jujutsu kaisen news.avif" width="70%" height="35%">
+            <p class="paragraf">JJK: Visual Artist Creates Sukuna's Malevolent Shrine Domain Expansion in Singapore</p>
+            <p class="description">Jujutsu Kaisen is featured in stunning 3D artwork by visual artist Aundraj Jude at a Singaporean train station, with the "real-life" projection referencing a fan-favorite character of the franchise, Ryomen Sukuna.</p>
+            <p class="description">Via Instagram, Jude used 3D animation to overlay Sukuna's Malevolent Shrine Domain Expansion technique on a train exit to a station in Raffles Place, Singapore. The video, posted on Jan. 12, 2024, serves as a stunning reminder and example of how art can be merged with reality, with many on social media commenting on how seamlessly the projection fits with the station's design. The video of the art piece 'in action' can be viewed below.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<h2 class="newstitle">News</h2>
+<hr class="hr1">
+<main>
+
+
+<div class="container">
+    <div class="news-card" onclick="openModal('news1')">
+        <img class="news-image" src="../Resurse/News 1.webp" >
+        <div class="news-title">Oi! Tonbo Golf Anime Releases New Trailer Introducing Character Voices</div>
+    </div>
+
+    <div class="news-card" onclick="openModal('news2')">
+        <img class="news-image" src="../Resurse/News 2.avif">
+        <div class="news-title">Luxury Merch Brand Unveils Its New Berserk Collaboration Line</div>
+    </div>
+
+    <div class="news-card" onclick="openModal('news3')">
+        <img class="news-image" src="../Resurse/News 3.avif" >
+        <div class="news-title">Nominees Announced as Voting Opens for 2024 Crunchyroll Anime Awards</div>
+    </div>
+
+    <div class="news-card" onclick="openModal('news4')">
+        <img class="news-image" src="../Resurse/News 4.avif">
+        <div class="news-title">Sword Art Online Confirms 'Brand New Movie' Is in Production</div>
+    </div>
+
+    <div class="news-card" onclick="openModal('news5')">
+        <img class="news-image" src="../Resurse/News 5.avif">
+        <div class="news-title">Jujutsu Kaisen Director's Ninja Kamui Is Coming to Toonami</div>
+    </div>
+
+    <div class="news-card" onclick="openModal('news6')">
+        <img class="news-image" src="../Resurse/News 6.avif">
+        <div class="news-title">Evangelion Partners With Designer Brand on Clothing Range After Rei-markable Fashion Week</div>
+    </div>
+
+    <div class="news-card" onclick="openModal('news7')">
+        <img class="news-image" src="../Resurse/News 7.avif">
+        <div class="news-title">Pokémon's Snorlax’s Dream Gourmet Manga Is Being Serialized Online for Free</div>
+    </div>
+
+    <div class="news-card" onclick="openModal('news8')">
+        <img class="news-image" src="../Resurse/News 8.avif">
+        <div class="news-title">Monkey D. Luffy Reviews Netflix's Live-Action One Piece</div>
+    </div>
+
+    <div class="news-card" onclick="openModal('news9')">
+        <img class="news-image" src="../Resurse/News 9.avif">
+        <div class="news-title">Dragon Ball Super Delivers One of the Most Important Roasts of the Year in Chapter 101</div>
+    </div>
+
+    <div class="news-card" onclick="openModal('news10')">
+        <img class="news-image" src="../Resurse/News 10.avif">
+        <div class="news-title">Kodansha Partners With Crunchyroll on Exclusive-Edition Initial D Manga Cover</div>
+    </div>
+
+    <div class="news-card" onclick="openModal('news11')">
+        <img class="news-image" src="../Resurse/News 11.avif">
+        <div class="news-title">Tite Kubo Determined to "Ensure His Vision" in Bleach's Final Anime Saga</div>
+    </div>
+
+    <div class="news-card" onclick="openModal('news12')">
+        <img class="news-image" src="../Resurse/News 12.avif">
+        <div class="news-title">Yen Press Reveals Its Top-Selling Manga and Novels of 2023</div>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+<div id="news1" class="modales" onclick="closeModal('news1')">
+    <div class="modales-content">
+        <div class="modal-header">
+        <span class="close-modal" onclick="closeModal('news1')">x</span>
+        </div>
+        <img src="../Resurse/News 1.webp" >
+        <h2 class="paragraf">Oi! Tonbo Golf Anime Releases New Trailer Introducing Character Voices</h2>
+        <div class="posted-by1">by: Mikikazu Komatsu</div>
+        <p class="description">The official website for the forthcoming TV anime adaptation of Ken Kawasaki (story) and Yu Furusawa's (arts) golf-themed manga Oi! Tonbo has released a 90-second new trailer. The TV anime is set to premiere in Japan in April 2024.</p>
+        <p class="description">The clip introduces the anime's main characters with their voices for the first time, including the protagonist Tonbo Oi played by Rika Hayashi and Iga Igarashi by Hiroki Touchi (Heiter in Frieren: Beyond Journey's End).</p>
+        <p class="description">"Tonbo is just a straight kid. All the balls she shots break to the left and right, though! (laugh)." Hayashi said on the website. "The world in Tonbo's eyes is all fresh and full of excitement and thrill. You can't miss the free thinking and many golf scenes. I am very honored to be involved in this very wonderful work. I will do my best to play the role so that everyone who supports Oi! Tonbo will enjoy."</p>
+    </div>
+</div>
+
+<div id="news2" class="modales" onclick="closeModal('news2')">
+    <div class="modales-content">
+        <div class="modal-header">
+        <span class="close-modal" onclick="closeModal('news1')">x</span>
+        </div>
+        <img src="../Resurse/News 2.1.webp" >
+        <h2 class="paragraf">Luxury Merch Brand Unveils Its New Berserk Collaboration Line</h2>
+        <div class="posted-by1">by: Timothy Donohoo</div>
+        <p class="description">Fans of Berserk can dress like the Black Swordsman himself thanks to a brand-new fashionable collaboration.</p>
+        <p class="description">The most striking of these new Berserk items is the black leather jacket. The stylish biker jacket bears the Brand of Sacrifice symbol that's synonymous with protagonist Guts. This makes the Berserk jacket a bit more subtle, but fans will know exactly what the symbols on the clothing mean. However, the item will cost a pretty penny with an asking price of around US$260. The three Berserk-themed watches are based on Griffith, Guts' Berserker Armor and the Skull Night, with Guts' being the most visually imposing.</p>
+        <p class="description">Two of these are US$260, although the Guts watch comes at a higher price point of $350. There's also a distressed scarf that evokes Guts' torn cloak, with the metallic pin recreating the Dragonslayer sword and the Berserker armor's design. Sold as a set, these items can be bought for $120. When combined into a single ensemble, Berserk fans who've shelled out the required cash can sport an outfit worthy of the beloved Kentaro Miura series.</p>
+    </div>
+</div>
+
+<div id="news3" class="modales" onclick="closeModal('news3')">
+    <div class="modales-content">
+        <div class="modal-header">
+        <span class="close-modal" onclick="closeModal('news1')">x</span>
+        </div>
+        <img src="../Resurse/News 3.avif" >
+        <h2 class="paragraf">Nominees Announced as Voting Opens for 2024 Crunchyroll Anime Awards</h2>
+        <div class="posted-by1">by: Leo Reyna</div>
+        <p class="description">Chainsaw Man, Jujutsu Kaisen and Oshi no Ko are among the announced nominees for the 2024 Crunchyroll Anime Awards that fans can now vote for online.</p>
+        <p class="description">Crunchyroll has announced the nominees and celebrity presenters for the 2024 Crunchyroll Anime Awards show, honoring anime titles like Chainsaw Man, Jujutsu Kaisen and Oshi no Ko, among numerous others across multiple categories.</p>
+        <p class="description">Per the streaming giant, the eighth annual Crunchyroll Anime Awards features over 30 categories for anime fans to vote for -- three of which are new to the online show. Dominating categories like Best Anime of the Year and Best Continuing Series are fan-favorite anime series like Chainsaw Man, Jujutsu Kaisen Season 2, Demon Slayer: Kimetsu no Yaiba, Attack on Titan and Season 2 of Vinland Saga. New and anime-original programming like the break-out hit Oshi no Ko and Bocchi the Rock! also make their mark as strong nominees.</p>
+    </div>
+</div>
+
+<div id="news4" class="modales" onclick="closeModal('news4')">
+    <div class="modales-content">
+        <div class="modal-header">
+        <span class="close-modal" onclick="closeModal('news1')">x</span>
+        </div>
+        <img src="../Resurse/News 4.avif" >
+        <h2 class="paragraf">Sword Art Online Confirms 'Brand New Movie' Is in Production</h2>
+        <div class="posted-by1">by: Chike Nwaenie</div>
+        <p class="description">The popular Sword Art Online anime franchise confirms that a "completely new theatrical film" by A-1 Pictures is in production.</p>
+        <p class="description">Sword Art Online has announced via an X (formerly Twitter) post that a completely new theatrical film for the iconic isekai franchise is now in production.</p>
+        <p class="description">Via the Sword Art Online official X account, it was confirmed that a new Sword Art Online film for release in theaters was currently being produced. "Thank you for watching Sword Art Online Progressive: Scherzo of Deep Night," the post reads. "A completely new theatrical film is in production! Please look forward to further updates." Scherzo of Deep Night, the most recent anime adaptation in the SAO franchise, had its theatrical release in Japan in October 2022. Aniplex licensed the film for North American release in February 2023.</p>
+    </div>
+</div>
+
+<div id="news5" class="modales" onclick="closeModal('news5')">
+    <div class="modales-content">
+        <div class="modal-header">
+        <span class="close-modal" onclick="closeModal('news1')">x</span>
+        </div>
+        <img src="../Resurse/News 5.avif" >
+        <h2 class="paragraf">Jujutsu Kaisen Director's Ninja Kamui Is Coming to Toonami</h2>
+        <div class="posted-by1">by: Zachary Cimaglio</div>
+        <p class="description">Ninja Kamui, a new anime by JJK director Sunghoo Park, was announced by Adult Swim in 2022 and follows a disgraced former ninja out for revenge.</p>
+        <p class="description">A brand-new anime series from the director of Jujutsu Kaisen called Ninja Kamui is coming to the Adult Swim programming block Toonami.</p>
+        <p class="description">The official X (formerly Twitter) account for Adult Swim recently shared a piece of promotional art for the new anime series, along with a confirmed premiere date of Feb. 11, 2024. Ninja Kamui comes from Jujutsu Kaisen director Sunghoo Park and his new studio E&H Production, with the show slotted to air at midnight on Toonami before streaming on Max the next day. The latter platform has not yet confirmed what time it will appear on the service.</p>
+    </div>
+</div>
+
+<div id="news6" class="modales" onclick="closeModal('news6')">
+    <div class="modales-content">
+        <div class="modal-header">
+        <span class="close-modal" onclick="closeModal('news1')">x</span>
+        </div>
+        <img src="../Resurse/News 6.avif" >
+        <h2 class="paragraf">Evangelion Partners With Designer Brand on Clothing Range After Rei-markable Fashion Week</h2>
+        <div class="posted-by1">by: Chike Nwaenie</div>
+        <p class="description">The Neon Genesis Evangelion anime partners with designer brand Seveskig for a retail fashion line after its debut in Rakuten Fashion Week.</p>
+        <p class="description">The Neon Genesis Evangelion anime has partnered up with designer brand Seveskig for a retail fashion line after the designs first debuted at Rakuten Fashion Week, with some of the designs featuring fan-favorite character Rei Ayanami specifically.</p>
+        <p class="description">Evangelion's information site revealed that fashion brand Seveskig was releasing an official collaboration with the anime. The line, seen below, features 10 items, including the "EVANGELION S/SL Tee Ver.Main visual" graphic t-shirts, which come in two designs, in both black and white, and retail for $135 and $101, respectively. An AT Field-inspired graphic t-shirt (black/white) also costs $101, while a Rei Ayanami-inspired long-sleeve t-shirt (black/white) costs $148. The "EVANGELION ATField Knit Cardigan" will set customers back $310, and the priciest item of the collection -- the "EVANGELION Disrupted ATField Duster Coat" -- costs around $1011. The collection was designed by NORI. Size information and worldwide shipping options are available on the official Seveskig site.</p>
+    </div>
+</div>
+
+<div id="news7" class="modales" onclick="closeModal('news7')">
+    <div class="modales-content">
+        <div class="modal-header">
+        <span class="close-modal" onclick="closeModal('news1')">x</span>
+        </div>
+        <img src="../Resurse/News 7.avif" >
+        <h2 class="paragraf">Pokémon's Snorlax’s Dream Gourmet Manga Is Being Serialized Online for Free</h2>
+        <div class="posted-by1">by: Zachary Cimaglio</div>
+        <p class="description">The fan-favorite chubby Pokémon takes center stage in his own manga series exclusively on the Project Snorlax social media accounts.</p>
+        <p class="description">A manga series starring Pokémon's chunkiest fan-favorite monster, Snorlax, is finally getting an official serialization on social media platforms.</p>
+        <p class="description">The first chapter of Snorlax's Dream Gourmet recently appeared online as part of the Pokémon Company's Project Snorlax campaign, which spans an official website and accounts on X (formerly Twitter) and Instagram. According to the official Pokémon website, there are six total chapters in the series, all of which are set to debut on the Project Snorlax webpage in the coming weeks, although they are currently only available in Japanese.</p>
+    </div>
+</div>
+
+<div id="news8" class="modales" onclick="closeModal('news8')">
+    <div class="modales-content">
+        <div class="modal-header">
+        <span class="close-modal" onclick="closeModal('news1')">x</span>
+        </div>
+        <img src="../Resurse/News 8.avif" >
+        <h2 class="paragraf">Monkey D. Luffy Reviews Netflix's Live-Action One Piece</h2>
+        <div class="posted-by1">by: Chike Nwaenie</div>
+        <p class="description">Monkey D. Luffy personally reviews Netflix's One Piece, as his English dub voice actor Colleen Clinkenbeard gives a glowing report of the series.</p>
+        <p class="description">Colleen Clinkenbeard, the English dub voice actor for One Piece's Monkey D. Luffy in the anime, has now watched the Netflix live-action adaptation of the series, giving a glowing review of the latter.</p>
+        <p class="description">In a post to X (formerly Twitter), Clinkenbeard praised the grand effort that went into condensing the story's "East Blue Saga" into just eight episodes. "Just finished @OnePieceNetflix and I really enjoyed it," she said. "It's hard to get all of that content into such a small number of episodes, but they managed it while keeping the heart of the story intact. So fun to watch all of the characters fall in love with Luffy! How could you not?"</p>
+    </div>
+</div>
+
+<div id="news9" class="modales" onclick="closeModal('news9')">
+    <div class="modales-content">
+        <div class="modal-header">
+        <span class="close-modal" onclick="closeModal('news1')">x</span>
+        </div>
+        <img src="../Resurse/News 9.avif" >
+        <h2 class="paragraf">Dragon Ball Super Delivers One of the Most Important Roasts of the Year in Chapter 101</h2>
+        <div class="posted-by1">by: Chike Nwaenie</div>
+        <p class="description">Dragon Ball Super Chapter 101 again confirms for many fans why Vegeta and Goku's rivalry is among the best and most exciting in all of shonen.</p>
+        <p class="description">Dragon Ball Super Chapter 101 confirms for many readers and franchise fans why Vegeta and Goku's rivalry is among the most engaging in shonen manga -- and how their dynamics have both grown over the years while remaining true to their roots.</p>
+        <p class="description">Dragon Ball Super released Chapter 101, titled, "Carmine and Soldier #15," on Jan. 18, 2024. As Goku, Vegeta, Whis and Beerus exchange information on the latest events on Earth, with Gohan and Piccolo taking down Cell Max, Goku's awe leads him straight into a Vegeta roast. Goku regrets not knowing that his son was in action due to his duel with Vegeta, prompting the latter to reply, "Heh, heh... indeed. The duel... which... you lost to me." The exchange was notable to fans, with many highlighting Goku's put-out reaction as an example of how Super has truly put the two on an equal footing.</p>
+    </div>
+</div>
+
+<div id="news10" class="modales" onclick="closeModal('news10')">
+    <div class="modales-content">
+        <div class="modal-header">
+        <span class="close-modal" onclick="closeModal('news1')">x</span>
+        </div>
+        <img src="../Resurse/News 10.avif" >
+        <h2 class="paragraf">Kodansha Partners With Crunchyroll on Exclusive-Edition Initial D Manga Cover</h2>
+        <div class="posted-by1">by: Renee Senzatimore</div>
+        <p class="description">Crunchyroll teams up with Japanese publisher Kodansha for an exclusive Volume 1 omnibus for Shuichi Shigeno's classic street racing manga, Initial D.</p>
+        <p class="description">Crunchyroll and Kodansha are teaming up to release an exclusive manga omnibus for Initial D.</p>
+        <p class="description">According to Crunchyroll's official site, Kodansha is republishing Shuichi Shigeno's classic racing manga with a series of new commemorative covers for each respective volume. The first omnibus, which compiles Vol. 1 and Vol. 2 of Initial D, features orange-hued foil-stamped artwork of the AE86 Trueno, the car that protagonist Takumi Fujiwara drives in the series. The new edition also includes an updated English translation. The omnibus is available now for pre-order via Crunchyroll's online shop. However, due to licensing/shipping restrictions, it can only be shipped to those residing in either the U.S. or Canada. Vol. 1 is scheduled to hit shelves on March 19, 2024.</p>
+    </div>
+</div>
+
+<div id="news11" class="modales" onclick="closeModal('news11')">
+    <div class="modales-content">
+        <div class="modal-header">
+        <span class="close-modal" onclick="closeModal('news1')">x</span>
+        </div>
+        <img src="../Resurse/News 11.avif" >
+        <h2 class="paragraf">Tite Kubo Determined to "Ensure His Vision" in Bleach's Final Anime Saga</h2>
+        <div class="posted-by1">by: Chike Nwaenie</div>
+        <p class="description">Bleach manga creator Tite Kubo teases further involvement in the Thousand Year Blood War Season 3 to ensure his vision from the manga is fulfilled.</p>
+        <p class="description">Bleach manga creator Tite Kubo has teased further personal involvement in the anime's production ahead of Season 3.</p>
+        <p class="description">Via Reddit, a Q&A from Kubo's Klub Outside revealed the manga author said he will be more involved in the storyboarding process to ensure his vision is properly translated from manga to anime. A translation taken from X (formerly Twitter) reads, "I'm checking the settings and production of the anime graphics and storyboard for the third cour of the anime. I feel like I'm starting to get more involved/involved in the storyboard details of the episodes. Normally, when a manga is converted into anime format, the image or message of the manga event will vary slightly depending on the audience, so my current work on it is to fill in the discrepancies between the different scenes in detail."</p>
+    </div>
+</div>
+
+<div id="news12" class="modales" onclick="closeModal('news12')">
+    <div class="modales-content">
+        <div class="modal-header">
+        <span class="close-modal" onclick="closeModal('news1')">x</span>
+        </div>
+        <img src="../Resurse/News 12.avif" >
+        <h2 class="paragraf">Yen Press Reveals Its Top-Selling Manga and Novels of 2023</h2>
+        <div class="posted-by1">by: Chike Nwaenie</div>
+        <p class="description">Popular publishing house Yen Press reveals its top-selling manga, manhwa, novels and debut titles for 2023, featuring popular works like Oshi no Ko.</p>
+        <p class="description">Popular American publishing house Yen Press has released its official list of its best-selling manga, manhwa and novels for 2023, with some predicited winners but also perhaps a few surprises.</p>
+        <p class="description">Yen Press revealed these highlights in a recent video posted to X (formerly Twitter). The platform published a total of 618 titles in 2023, with the top genres being fantasy, science-fiction, action-adventure, romance and horror, with Toilet-bound Hanako-kun being its best-selling manga series of the year. Meanwhile, Oshi no Ko., Vol. 1 was the best-selling individual volume of the year. "2023 was a big year for idols, villainesses, and stray dogs! It was also a big year for Yen Press, thanks to YOU!🥳," the post reads. "Take a look back as we check out some of the highlights for 2023! 🎊" The full lists of 2023's top manga/manhwa and novels, as well as the top debut novels, manga and manhwa licensed by Yen Press, can be viewed below.</p>
+    </div>
+</div>
+
+
+</main>
+
+<!--Footer-->
+<footer class="site-footer">
+    <div class="footer-links">
+        <ul>
+          <li><a href="../Home Page/Home-Page.html" target="_blank">Home</a></li>
+          <li><a href="../Catalog/Catalog-Page.html" target="_blank">Catalog</a></li>
+          <li><a href="../News/News-Page.html" target="_blank">News</a></li>
+          <li><a href="../Manga/Manga-Page.html">Manga</a></li>
+          <li><a href="../Login-Singin/Login-Singin-Page.html">Login/Singin</a></li>
+        </ul>
+      </div>
+
+    <div class="footer-socials">
+        <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Tumblr</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-anime-image">
+        <img src="https://i1.wp.com/picult.com/avatar/100px-avatar/1145877646822.gif" alt="Anime picture" width="100">
+        <p>Thanks for coming!</p>
+    </div>
+
+    </footer>
+    <div class="footer-copyright">
+    <p>&copy; 2022 Anime Site. All rights reserved.</p>
+    </div>
+    <script src="../News/News-Page-script.js"></script>
+    
+</body>
+</html>

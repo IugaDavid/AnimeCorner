@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Login-Singin/Login-Singin-Page-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <title>AnimeCorner</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class='nav-bar'>
+                <img src="../Resurse/White logo - no background.png" width="150px">
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                    <li><a href="../Home Page/Home-Page.html" target="_blank">Home</a></li>
+                    <li><a href="../Manga/Manga-Page.html" target="_blank">Manga</a></li>
+                    <li><a href="../Catalog/Catalog-Page.html" target="_blank">Catalog</a></li>
+                    <li><a href="../News/News-Page.html" target="_blank">News</a></li>
+                    <li><a href="../Login-Singin/Login-Singin-Page.html" target="_blank">LogIn/Singin</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+        </header>
+
+
+
+	<div class="form">
+        <img class="img1" src="../Resurse/login picture.png" alt="">
+        <img class="img2" src="../Resurse/singin png.png" alt="">
+	<div class="main">  
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form>
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input id="username" type="text" name="txt" placeholder="Username" required>
+                    <div class="Error" id="nameError"></div>
+					<input id="email" type="email" name="email" placeholder="Email" required>
+                    <div class="Error" id="emailError"></div>
+					<input id="password" type="password" name="pswd" placeholder="Password" required>
+                    <div class="Error" id="passwordError"></div>
+					<button onclick="register()">Sign up</button>
+				</form>
+			</div>
+
+			<div class="login">
+				<form>
+					<label for="chk" aria-hidden="true">Login</label>
+					<input id="username1" type="text" name="txt" placeholder="Username" required="">
+                    <div class="Error" id="nameError1"></div>
+					<input id="password1" type="password" name="pswd" placeholder="Password" required="">
+                    <div class="Error" id="passwordError1"></div>
+					<button onclick="login() ">Login</button>
+				</form>
+			</div>
+	</div>
+    </div>
+    
+    
+    <footer class="site-footer">
+        <div class="footer-links">
+          <ul>
+            <li><a href="../Home Page/Home-Page.html" target="_blank">Home</a></li>
+            <li><a href="../Catalog/Catalog-Page.html" target="_blank">Catalog</a></li>
+            <li><a href="../News/News-Page.html" target="_blank">News</a></li>
+            <li><a href="../Manga/Manga-Page.html">Manga</a></li>
+            <li><a href="../Login-Singin/Login-Singin-Page.html">Login/Singin</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-socials">
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Tumblr</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-anime-image">
+          <img src="https://i1.wp.com/picult.com/avatar/100px-avatar/1145877646822.gif" alt="Anime picture" width="100">
+          <p>Thanks for coming!</p>
+        </div>
+    
+     </footer>
+     <div class="footer-copyright">
+        <p>&copy; 2022 Anime Site. All rights reserved.</p>
+      </div>
+</body>
+<script src="../Login-Singin/Login-Singin-Page-script.js"></script>
+</html>
